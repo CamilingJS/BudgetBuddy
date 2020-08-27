@@ -112,7 +112,7 @@ input[type='number'] {
 
 .btn {
   cursor: pointer;
-  background-color: #9c88ff;
+  background-color: rgba(53, 40, 97, 0.753);
   box-shadow: var(--box-shadow);
   color: #fff;
   border: 0;
