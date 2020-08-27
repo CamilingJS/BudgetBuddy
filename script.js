@@ -55,7 +55,7 @@ function addTransactionDOM(transaction) {
   item.innerHTML = `
      ${transaction.text} <span>${sign}${Math.abs(
     transaction.amount
-  )}</span> <button >x</button>`;
+  )}</span> <button onClick="removeTransaction(${transaction.id})" >x</button>`;
 
   list.appendChild(item);
 }
@@ -79,6 +79,13 @@ function updateValues() {
   balance.innerText = `$${total}`;
   money_plus.innerText = `$${income}`;
   money_minus.innerText = `$${expense}`;
+}
+
+//Remove transaction by ID
+function removeTransaction(id) {
+  transactions = transactions.filter(transaction => transaction.id !== id);
+
+  init();
 }
 
 //Init app
